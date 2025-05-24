@@ -18,14 +18,23 @@ class Block {
 
 class Blockchain {
   constructor() {
-    this.chain = [];
+    this.chain = [this.generateGenesisBlock()];
   }
 
-  addBlock(newBlock){
-    // if (this.chain.length > 0) {
-    //   newBlock.prevHash = this.chain[this.chain.length - 1].hash;
-    // }
-    // newBlock.hash = newBlock.calculateHash();
+  generateGenesisBlock() {
+    const genesisBlock = new Block("01/01/2023", "Genesis Block", "0000000000");
+    return genesisBlock;
+  }
+
+  getLatestBlock() {
+    return this.chain[this.chain.length - 1];
+  }
+
+  addBlock(newBlock) {
+    if (this.chain.length > 0) {
+      newBlock.prevHash = this.getLatestBlock().hash;
+    }
+    newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock);
   }
 }
