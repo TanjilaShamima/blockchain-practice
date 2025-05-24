@@ -37,6 +37,22 @@ class Blockchain {
     newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock);
   }
+
+  isBlockchainValid() {
+    for (let i = 1; i < this.chain.length; i++) {
+      const currentBlock = this.chain[i];
+      const previousBlock = this.chain[i - 1];
+
+      if (currentBlock.hash !== currentBlock.calculateHash()) {
+        return false;
+      }
+
+      if (currentBlock.prevHash !== previousBlock.hash) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
 const block1 = new Block("01/01/2023", { amount: 4 }, "abcdef12345");
@@ -61,4 +77,9 @@ const jossCoin = new Blockchain();
 jossCoin.addBlock(block1);
 
 console.log("JossCoin Blockchain:", jossCoin);
+
+jossCoin.addBlock(new Block("02/01/2023", { amount: 10 }, 'abcdef12345'));
+jossCoin.addBlock(new Block("03/01/2023", { amount: 20 }, jossCoin.getLatestBlock().hash));
+
+console.log("JossCoin Blockchain:", jossCoin.isBlockchainValid() ? "is valid" : "is not valid");
 
