@@ -1,4 +1,5 @@
-Blockchain Learning Roadmap (Beginner to Advanced)
+<h1>Blockchain Learning Roadmap (Beginner to Advanced)</h1>h1>
+
 ✅ Stage 1: Blockchain Fundamentals
 Topics:
 
@@ -17,6 +18,8 @@ Coursera - Blockchain Basics (Buffalo University)
 YouTube - Simply Explained: Blockchain
 
 Mini Project: Create a simple blockchain using Python
+
+
 
 ✅ Stage 2: Ethereum and Smart Contracts
 Topics:
@@ -39,6 +42,8 @@ Udemy - Ethereum and Solidity: The Complete Developer's Guide
 
 Mini Project: Create a voting contract in Solidity
 
+
+
 ✅ Stage 3: DApps (Decentralized Apps)
 Topics:
 
@@ -59,6 +64,8 @@ Projects:
 DApp for Token Transfer
 
 Decentralized To-Do App
+
+
 
 ✅ Stage 4: Advanced Topics
 Topics:
@@ -83,6 +90,8 @@ Mint your own NFT
 
 Build a Decentralized Voting System
 
+
+
 ✅ Stage 5: Real-world Integration
 Topics:
 
@@ -102,7 +111,9 @@ Decentralized Marketplace
 
 Web3 Login System (Wallet Auth)
 
-Bonus Tools You Should Learn:
+
+
+✅ Bonus Tools You Should Learn:
 MetaMask
 
 Hardhat / Truffle
